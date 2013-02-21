@@ -8,7 +8,7 @@ Installation
 ------------
 
 Download all files in the repository to one folder. Navigate to the directory in your terminal/command prompt, and then run ```python setup.py install```
-You can also install via pip: ```pip install pydecrypt```
+\nYou can also install via pip: ```pip install pydecrypt```
 
 Usage 
 ------------
