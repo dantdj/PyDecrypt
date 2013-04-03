@@ -1,8 +1,7 @@
 PyDecrypt
 =========
 
-Simple Python decrypter for hashes. Currently MD5 only, and limited to 4 alphabetical characters for fast decryption.
-5 alphabetical characters decryption is available, but generating the files will use ~1.5GB of RAM and take a good few minutes. After that, however, the searching for a hash is nearly instant and uses barely any RAM.
+Simple Python decrypter for hashes. Currently MD5 only. Checking is only really efficient currently up to around 5 alpha-numeric characters. 
 
 Installation
 ------------
@@ -14,25 +13,25 @@ You can also install via pip: ```pip install pydecrypt```
 Usage 
 ------------
 
-Call the MD5 Decrypter in your code by using ```PyDecrypt.MD5Decrypt(value)```, where "value" is your MD5 hash. The module will also return the final value of the key, so you can assign it straight into a variable if you wish.
+Call the MD5 Decrypter in your code by using ```pydecrypt.brute_force_md5(value)```, where "value" is your MD5 hash. The module will also return the final value of the key, so you can assign it straight into a variable if you wish.
 
 Example program
 -------------
 ```python
-import PyDecrypt
+import pydecrypt
 
 value = raw_input("Enter your MD5 hash: ")
-PyDecrypt.MD5Decrypt(value)
+pydecrypt.brute_force_md5(value)
 ```
 
 The other way this module can be used is like this:
 ```python
-import PyDecrypt
+import pydecrypt
 
 value = raw_input("Enter your MD5 hash: ")
-decrypted_hash = PyDecrypt.MD5Decrypt(value)
+decrypted_hash = pydecrypt.brute_force_md5(value)
 print decrypted_hash
 ```
 
-This assigns the result of ```PyDecrypt.MD5Decrypt(value)``` to the variable ```decrypted_hash```, which is printed in the next line.
+This assigns the result of ```pydecrypt.brute_force_md5(value)``` to the variable ```decrypted_hash```, which is printed in the next line.
 
