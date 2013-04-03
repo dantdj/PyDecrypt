@@ -14,6 +14,10 @@ Usage
 ------------
 
 Call the MD5 Decrypter in your code by using ```pydecrypt.brute_force_md5(value)```, where "value" is your MD5 hash. The module will also return the final value of the key, so you can assign it straight into a variable if you wish.
+The available parameters for the `brute_force_md5` function are as such: `(value[,minimum_char][,log])`.
+value = MD5 hash to be decrypted.
+minimum_char = Optional, used to denote the minimum length of the decrypted hash if such a guess can be made. Aims to reduce generation of unnecessary combinations. Set to 1 by default.
+log = Optional, used to determine whether the module logs its output to the terminal/command prompt window. Set to True by default. If using as part of a larger program, set this to False. 
 
 Example program
 -------------
