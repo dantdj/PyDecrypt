@@ -7,7 +7,7 @@ import sys
  
 assert string.ascii_lowercase == 'abcdefghijklmnopqrstuvwxyz'
  
-def brute_force_md5(target_hash, minimum_char=1, log=True, skip_id=0, skip_count=1):
+def brute_force_md5(target_hash, minimum_char=1, log=False, skip_id=0, skip_count=1):
     for i in range(minimum_char, 6):
         product = itertools.product(string.ascii_lowercase + string.digits, repeat=i)
         char_space = itertools.imap(''.join, product)
